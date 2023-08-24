@@ -96,6 +96,7 @@ class ViewController: UITableViewController {
         // Error messages for different cases
         let errorTitle: String
         let errorMessage: String
+        //
 
         if isPossible(word: lowerAnswer) {
             if isOriginal(word: lowerAnswer) {
