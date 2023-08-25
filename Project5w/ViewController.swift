@@ -107,7 +107,7 @@ class ViewController: UITableViewController {
             if isOriginal(word: lowerAnswer) {
                 if isReal(word: lowerAnswer) {
                     // Insert valid answer into the usedWords array
-                    usedWords.insert(answer, at: 0)
+                    usedWords.insert(lowerAnswer, at: 0)
 
                     // Insert a new row in the table for the new word
                     let indexPath = IndexPath(row: 0, section: 0)
