@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         // Set up "Add" button on the navigation bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
         
+        // Set up "Restart" button on the navigation bar
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(startGame))
 
         // Load initial word list from a file, or use a default word
