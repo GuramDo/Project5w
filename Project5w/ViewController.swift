@@ -82,11 +82,18 @@ class ViewController: UITableViewController {
 
     // Check if a word is a valid English word
     func isReal(word: String) -> Bool {
+        
+        if word.utf16.count < 3 || word.lowercased() == title!.lowercased() {
+            return false
+        }
+        
         let checker = UITextChecker()
         let range = NSMakeRange(0, word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
 
         return misspelledRange.location == NSNotFound
+        
+        
     }
 
     // Process the submitted answer
